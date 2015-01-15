@@ -26,7 +26,7 @@ Versionable Jenkins setup, deployable on AWS elastic beanstalk
 
         package.sh
 
- * Deploy application on elastic beanstalk. Via aws console or awscli.
+ * Deploy application on elastic beanstalk. Via aws console or awscli as follows
 
         aws s3 cp target/jenkins-<version>.zip s3://<bucket>/<path>
 
