@@ -1,8 +1,8 @@
 # Jenkins on AWS elastic beanstalk
-Versionable Jenkins setup
+Versionable Jenkins setup, deployable on AWS elastic beanstalk
 
 ## Prerequisites
- * Create AWS elastic beanstalk environment
+ * Create AWS elastic beanstalk environment: single web server, docker
  * Local docker installed
 
 ## Add/modify jobs flow
@@ -14,7 +14,7 @@ Versionable Jenkins setup
  * Modify jobs/configuration/users
  * Once done go back to console and hit Ctrl+C
  * After jenkins stop, modified files are automatically copied to jenkins_home
- * Add new jobs, if required
+ * Add new jobs to git, if required
 
         git add jenkins_home
 
@@ -26,9 +26,9 @@ Versionable Jenkins setup
 
         package.sh
 
- * Deploy application on elastic beanstalk
+ * Deploy application on elastic beanstalk. Via aws console or awscli.
 
-        aws s3 cp jenkins.zip s3://<bucket>/<path>
+        aws s3 cp target/jenkins-<version>.zip s3://<bucket>/<path>
 
         aws elasticbeanstalk create-application-version \
             --application-name <application> \
