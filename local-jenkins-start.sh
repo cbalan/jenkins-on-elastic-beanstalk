@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-# build ecom4isi-ci
+# build jenkins-on-elastic-beanstalk
 docker build -t jenkins-on-elastic-beanstalk ./
 
 # run
