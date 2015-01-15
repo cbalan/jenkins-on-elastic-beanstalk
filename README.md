@@ -10,7 +10,7 @@ Versionable Jenkins setup, deployable on AWS elastic beanstalk
 
         ./local-jenkins-start.sh
 
- * Browser open http://<docker host ip>:8080/
+ * Browser open http://docker host ip:8080/
  * Modify jobs/configuration/users
  * Once done go back to console and hit Ctrl+C
  * After jenkins stop, modified files are automatically copied to jenkins_home
