@@ -3,6 +3,8 @@ FROM jenkins:1.585
 # run with root to workaround jenkins user not being able to write in jenkins_home
 USER root
 
+RUN apt-get install rsync
+
 # plugins
 RUN mkdir -p /tmp/WEB-INF/plugins
 RUN curl -L http://updates.jenkins-ci.org/latest/git.hpi -o /tmp/WEB-INF/plugins/git.hpi
